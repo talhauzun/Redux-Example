@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import Navi from './Components/Navi'
+import CategoryList from './Components/CategoryList'
+import { Container, Row, Col } from 'reactstrap';
+export default class App extends Component {
+  render() {
+    return (
+      <div>
+         <Container> 
+         <Row>
+          <Col> <Navi></Navi></Col>
+        </Row>
+        <Row>
+          <Col xl="3"> <CategoryList/></Col>
+          <Col  xl="9"> <CategoryList/></Col>
+        </Row>
+      
+        
+        
+      
+        </Container>
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      </div>
+    )
+  }
 }
 
-export default App;
